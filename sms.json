@@ -1,0 +1,32 @@
+POST /interaction/v1/interactions
+
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjQiLCJ2ZXIiOiIxIiwidHlwIjoiSldUIn0.eyJhY2Nlc3NfdG9rZW4iOiJZb1gxM0c0bk5Cc2czdDBJWlhCenVkRnoiLCJjbGllbnRfaWQiOiJjZDFlcXA4MGxzc3VxcjlpcTRzeW8wcDAiLCJlaWQiOjUxNDAwNjAyNywic3RhY2tfa2V5IjoiUzExIiwicGxhdGZvcm1fdmVyc2lvbiI6MiwiY2xpZW50X3R5cGUiOiJTZXJ2ZXJUb1NlcnZlciIsInBpZCI6NDQ0fQ.ZgAvzegyLQexa7a_jESYlklBrk18L6eqPuIazsCRlMQ.ZT9S9Ex7yL7dA0o97uKmfkZt48GDKsCc6xWA_ni5ECC2HNd0ncSxFgvidLUhqdzaBW6_3P2iATt_tgg3-spFI_IphtILMuGCvM22obULe0I4pvkK-TQjExqb9ee7eRtBnFDC9yIJztONPSAw7GCFczvG_lTQOyq-BnO4b
+Content-Type: application/json
+
+{
+    "name": "Custom SMS Journey",
+    "workflowApiVersion": 1.1,
+    "description": "This is a custom SMS journey",
+    "startEvent": {
+        "eventDefinitionKey": "APIEvent-ae3cf6c1-bf53-7f3a-3e5d-165413a6a501",
+        "data": {
+            "smsMessage": "Welcome to our SMS Journey"
+        }
+    },
+    "schema": {
+        "arguments": {
+            "execute": {
+                "inArguments": [],
+                "outArguments": [],
+                "url": "https://nikhilsms.herokuapp.com/",
+                "verb": "POST",
+                "body": "",
+                "header": ""
+            }
+        }
+    },
+    "outcomes": [],
+    "metaData": {
+        "isConfigured": true
+    }
+}
